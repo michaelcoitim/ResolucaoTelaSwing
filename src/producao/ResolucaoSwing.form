@@ -97,6 +97,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Clique aqui"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTelaActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

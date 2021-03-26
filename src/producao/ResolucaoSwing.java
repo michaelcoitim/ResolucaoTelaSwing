@@ -5,6 +5,10 @@
  */
 package producao;
 
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author micha
@@ -45,6 +49,11 @@ public class ResolucaoSwing extends javax.swing.JFrame {
         lblMensagen.setText("clique no botão");
 
         btnTela.setText("Clique aqui");
+        btnTela.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTelaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,6 +92,13 @@ public class ResolucaoSwing extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTelaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTelaActionPerformed
+        Toolkit tela = Toolkit.getDefaultToolkit();
+        Dimension d = tela.getScreenSize();
+        lblMensagen.setForeground(Color.red);
+        lblMensagen.setText(d.height + " X "+d.width);
+    }//GEN-LAST:event_btnTelaActionPerformed
 
     /**
      * @param args the command line arguments
